@@ -1,0 +1,9 @@
+Flask
+opencv-python
+torch
+numpy
+flask-cors
+ultralytics
+Werkzeug
+google-generativeai
+pymongo
