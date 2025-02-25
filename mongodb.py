@@ -14,6 +14,10 @@ import google.generativeai as genai
 
 # MongoDB Connection
 MONGO_URI = os.environ.get("MONGO_URI")  # Get the connection string from Render environment variables
+if not MONGO_URI:
+    print("❌ MONGO_URI is not set!")
+else:
+    print(f"✅ MONGO_URI: {MONGO_URI}") 
 client = MongoClient(MONGO_URI)
 db = client["your_database_name"]  # Replace with your actual database name
 uploads_collection = db["uploads"]
